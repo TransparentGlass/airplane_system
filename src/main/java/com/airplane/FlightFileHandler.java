@@ -1,4 +1,4 @@
-package CSCC20Project;
+package com.airplane;
 
 import java.io.File;
 import java.io.FileNotFoundException;

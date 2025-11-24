@@ -1,4 +1,4 @@
-package ;
+package com.airplane;
 public abstract class Person {
     protected String name;
     protected String passportNumber;

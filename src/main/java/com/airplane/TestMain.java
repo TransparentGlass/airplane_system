@@ -1,6 +1,6 @@
 //Dili pani final nga main class
 
-package CSCC20Project;
+package com.airplane;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

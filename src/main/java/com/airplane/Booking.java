@@ -1,4 +1,4 @@
-package CSCC20Project;
+package com.airplane;
 public abstract class Booking {
     protected Passenger passenger;
     protected flight bookedFlight;

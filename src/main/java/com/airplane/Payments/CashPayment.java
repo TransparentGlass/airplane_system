@@ -1,4 +1,4 @@
-package CSCC20Project.Payments;
+package com.airplane.Payments;
 public class CashPayment extends Payment {
 
     public CashPayment(double amount) {

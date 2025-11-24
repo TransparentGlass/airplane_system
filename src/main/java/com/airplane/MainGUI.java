@@ -1,4 +1,4 @@
-package CSCC20Project;
+package com.airplane;
 //Miau
 import javax.swing.*;
 

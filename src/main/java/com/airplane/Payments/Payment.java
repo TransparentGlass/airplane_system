@@ -1,4 +1,4 @@
-package CSCC20Project.Payments;
+package com.airplane.Payments;
 
 public abstract class Payment {
     protected double amount;

@@ -1,4 +1,4 @@
-package com.airplane;
+package com.airplane.FlightSystem;
 public abstract class Booking {
     protected Passenger passenger;
     protected Flight bookedFlight;

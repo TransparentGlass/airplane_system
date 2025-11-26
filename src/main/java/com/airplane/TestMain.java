@@ -1,10 +1,14 @@
 package com.airplane;
+import com.airplane.FlightSystem.*;
+
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.TimeZone;
+
+
 
 public class TestMain {
     static Scanner scanner = new Scanner(System.in);
@@ -51,6 +55,7 @@ public class TestMain {
         scanner.close(); // <-- close AFTER loop
     }
 
+    //TODO: Move this to FlightFileHandler
     private static void initializeFlights(SimpleDateFormat sdf) {
         if (flightLists.isEmpty()) {
             try {
@@ -65,6 +70,8 @@ public class TestMain {
         }
     }
 
+
+    //TODO: Create a clear pipline for location selection
     public static void locationSelection() {
         System.out.println("\n--- Check Fare ---");
         while (true) {
@@ -77,6 +84,8 @@ public class TestMain {
 
             boolean found = false;
             for (Flight f : flightLists) {
+                //FIXME: change to getTargetDestination.
+                //FIXME: Calculate fare should return fare instead of void.
                 if (f.getDestination().equalsIgnoreCase(city)) {
                     f.calculateFare();
                     found = true;
@@ -102,12 +111,14 @@ public class TestMain {
         }
     }
 
+    //TODO: Clear pipeline for booking a seat. Shit is too confusing.
     public static void bookSeat() {
         System.out.print("Enter Destination to search for flights (e.g. Cebu): ");
         String dest = scanner.nextLine().trim();
 
         boolean found = false;
         for (Flight f : flightLists) {
+            //FIXME
             if (f.getDestination().equalsIgnoreCase(dest)) {
                 found = true;
                 System.out.println("\nFound Flight: " + f.getFlightNumber());

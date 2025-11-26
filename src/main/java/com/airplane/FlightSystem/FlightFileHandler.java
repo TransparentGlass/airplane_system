@@ -1,4 +1,4 @@
-package com.airplane;
+package com.airplane.FlightSystem;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,8 +26,8 @@ public class FlightFileHandler {
 				String line = String.format("%s,%s,%s,%s,%s,%s,%d\n",
 						type,
 						f.getFlightNumber(),
-						f.getDeparture(),
-						f.getDestination(),
+						f.getSourceDestination(),
+						f.getTargetDestination(),
 						depTime,
 						arrTime,
 						f.getAvailableSeats()

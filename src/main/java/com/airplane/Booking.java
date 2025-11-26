@@ -1,9 +1,9 @@
 package com.airplane;
 public abstract class Booking {
     protected Passenger passenger;
-    protected flight bookedFlight;
+    protected Flight bookedFlight;
 
-    public Booking(Passenger passenger, flight bookedFlight) {
+    public Booking(Passenger passenger, Flight bookedFlight) {
         this.passenger = passenger;
         this.bookedFlight = bookedFlight;
     }
@@ -14,7 +14,7 @@ public abstract class Booking {
 
 class ConfirmedBooking extends Booking {
 
-    public ConfirmedBooking(Passenger passenger, flight bookedFlight) {
+    public ConfirmedBooking(Passenger passenger, Flight bookedFlight) {
         super(passenger, bookedFlight);
     }
 
@@ -36,7 +36,7 @@ class ConfirmedBooking extends Booking {
 
 class CancelledBooking extends Booking {
 
-    public CancelledBooking(Passenger passenger, flight bookedFlight) {
+    public CancelledBooking(Passenger passenger, Flight bookedFlight) {
         super(passenger, bookedFlight);
     }
 

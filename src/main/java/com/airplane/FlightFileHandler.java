@@ -16,9 +16,9 @@ public class FlightFileHandler {
 	private static final String FILE_NAME = "flight.txt";
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("mm/dd/yyyy HH:mm");
 	
-	public static void saveFlight(ArrayList<flight> flights) {
+	public static void saveFlight(ArrayList<Flight> flights) {
 		try (FileWriter writer = new FileWriter(FILE_NAME)) {
-			for (flight f : flights) {
+			for (Flight f : flights) {
 				String type =  ( f instanceof EconomyClass) ? "Economy" : "Business";
 				String depTime = sdf.format(f.getDepartureTime());
 				String arrTime = sdf.format(f.getArrivalTime());
@@ -41,8 +41,8 @@ public class FlightFileHandler {
 		}
 	}
 	//Load Method 
-	public static ArrayList<flight> loadFlights() {
-		ArrayList<flight> loadedList = new ArrayList<>();
+	public static ArrayList<Flight> loadFlights() {
+		ArrayList<Flight> loadedList = new ArrayList<>();
 		File file = new File(FILE_NAME);
 		if (!file.exists()) {
 			System.out.println("No save file found. Starting new.");
@@ -62,7 +62,7 @@ public class FlightFileHandler {
 					Date arrTime = sdf.parse(data[5]);
 					int seats = Integer.parseInt(data[6]);
 					
-					flight f;
+					Flight f;
 					if (type.equals("Economy")) {
 						f = new EconomyClass(id, dep, dest, depTime, arrTime, seats);
 					} else {

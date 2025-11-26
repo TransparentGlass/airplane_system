@@ -2,9 +2,9 @@ package com.airplane;
 //Miau
 import javax.swing.*;
 
-public class MainGUI extends JFrame {
+public class MainUI extends JFrame {
 
-    public MainGUI() {
+    public MainUI() {
         setTitle("M.A.M.A Airlines - Flight Booking System");
         setSize(500, 400);
         setLayout(null); // Your request: null layout
@@ -27,6 +27,6 @@ public class MainGUI extends JFrame {
         try { UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel"); }
         catch (Exception e) { e.printStackTrace(); }
         //Para chuy tanawon ang buttons n shit
-        new MainGUI().setVisible(true);
+        new MainUI().setVisible(true);
     }
 }

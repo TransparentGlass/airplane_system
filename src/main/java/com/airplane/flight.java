@@ -2,7 +2,7 @@ package com.airplane;
 
 import java.util.Date;
 
-public abstract class flight {
+public abstract class Flight {
 	private String flightNumber;
 	private String departure;
 	private String destination;
@@ -10,7 +10,7 @@ public abstract class flight {
 	private Date arrivalTime;
 	private int availableSeats;
 	
-	public flight(String flightNumber, String departure, String destination, Date departureTime, Date arrivalTime, int availableSeats) {
+	public Flight(String flightNumber, String departure, String destination, Date departureTime, Date arrivalTime, int availableSeats) {
 		this.flightNumber = flightNumber;
 		this.departure = departure;
 		this.destination = destination;
@@ -111,7 +111,7 @@ public abstract class flight {
 	}
 
 
-class EconomyClass extends flight {
+class EconomyClass extends Flight {
 	
 	public EconomyClass(String flightNumber, String departure, String destination, Date departureTime, Date arrivalTime, int availableSeats) {
 		super(flightNumber, departure, destination, departureTime, arrivalTime, availableSeats);
@@ -164,7 +164,7 @@ class EconomyClass extends flight {
 	
 
 	
-class BusinessClass extends flight {
+class BusinessClass extends Flight {
 	
 
 	public BusinessClass(String flightNumber, String departure, String destination, Date departureTime, Date arrivalTime, int availableSeats) {

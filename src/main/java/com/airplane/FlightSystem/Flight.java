@@ -2,13 +2,15 @@ package com.airplane.FlightSystem;
 
 import java.util.Date;
 
-public abstract class Flight {
+public class Flight {
 	private String flightNumber;
 	private String Source_destination;
 	private String Target_destination;
 	private Date departureTime;
 	private Date arrivalTime;
 	private int availableSeats;
+	protected int fare;
+	protected int rate;
 	
 	public Flight(String flightNumber, String Source_destination,
 			 String Target_destination, Date departureTime, Date arrivalTime, 
@@ -73,13 +75,6 @@ public abstract class Flight {
 		System.out.println("The flight has been engined");
 		
 	}
-
-	//TODO: implement fare calculation method that changes rate based on flight class.
-	protected double calculateFare(int distance, double rate) {
-		double fare = distance * rate;
-		return fare;
-
-	}
 	
 	public void displayFlight() {
 		System.out.println(" --- Flight Details --- " );
@@ -90,15 +85,15 @@ public abstract class Flight {
 		System.out.println("Arrival: " + getArrivalTime());
 		System.out.println("Available Seats: " + getAvailableSeats());
 	}
-		
-		public void checkSeatsAvailable() {
+	public void checkSeatsAvailable() {
 			if (getAvailableSeats() > 0) {
 				System.out.println("The seats are available");
 			} else {
 				System.out.println("The seats are not available");
 			}
-		}	
-		public boolean reserveSeats(int seatsToReserve) {
+	}	
+
+	public boolean reserveSeats(int seatsToReserve) {
 			if (seatsToReserve <= 0) {
 				System.out.println("Invalid number of seats");
 				return false;
@@ -115,11 +110,19 @@ public abstract class Flight {
 			}
 			
 		}
-	}
 
-	protected int calculateDistance(String Source_destination, String Target_destination) {
+	public int getFare() {
 		
-	}
+		Fare fareCalculator = new Fare();
+		double distance = Fare.calculateDistance(
+				Fare.getLocationCoords(this.getSourceDestination()),
+				Fare.getLocationCoords(this.getTargetDestination())
+				);
+		this.fare = fareCalculator.calculateFare(distance, this.rate);
+		return fare;
+	}	
+}
+
 
 
 

@@ -1,0 +1,5 @@
+# Created at 2025-11-26T23:33:32.210
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Glass\Projects\School\CSCC 20\airplane_system\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

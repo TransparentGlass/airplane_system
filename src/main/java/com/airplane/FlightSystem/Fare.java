@@ -14,18 +14,14 @@ public class Fare {
         FlightTable.put("CDO", new double[]{8.4542, 124.6319});
     }
 
-    
-    // TODO: Implement a fare calculation method that uses the distance table.
     public int calculateFare(double distance, double rate) {
-        
-			//TODO: implement fare calculation with Business class rates.
             int fare = (int) Math.round(distance * rate);
             return fare;
     }
 
-    public static double calculateDistance(double[] source_loc, double[] target_loc) {
+    public static double getDistance(double[] source_loc, double[] target_loc) {
 
-            // Convert degrees to radians
+        // Convert degrees to radians
         double lat1Rad = Math.toRadians(source_loc[0]);
         double lon1Rad = Math.toRadians(source_loc[1]);
         double lat2Rad = Math.toRadians(target_loc[0]);

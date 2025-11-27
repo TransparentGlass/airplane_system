@@ -26,6 +26,7 @@ public class Flight {
 	public String getFlightNumber() {
 		return flightNumber;
 	}
+	
 	public void setFlightNumber(String flightNumber) {
 		this.flightNumber = flightNumber;
 	}
@@ -55,6 +56,7 @@ public class Flight {
 	public Date getArrivalTime() {
 		return arrivalTime;
 	}
+
 	public void setArrivalTime(Date arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
@@ -85,6 +87,7 @@ public class Flight {
 		System.out.println("Arrival: " + getArrivalTime());
 		System.out.println("Available Seats: " + getAvailableSeats());
 	}
+	
 	public void checkSeatsAvailable() {
 			if (getAvailableSeats() > 0) {
 				System.out.println("The seats are available");
@@ -114,14 +117,15 @@ public class Flight {
 	public int getFare() {
 		
 		Fare fareCalculator = new Fare();
-		double distance = Fare.calculateDistance(
+		double distance = Fare.getDistance(
 				Fare.getLocationCoords(this.getSourceDestination()),
 				Fare.getLocationCoords(this.getTargetDestination())
 				);
 		this.fare = fareCalculator.calculateFare(distance, this.rate);
-		return fare;
+		return this.fare;
 	}	
 }
+
 
 
 

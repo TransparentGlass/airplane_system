@@ -7,6 +7,15 @@ public class CardPayment extends Payment {
         super(amount);
         this.cardNumber = cardNumber;
     }
+    
+    public void isCardValid() {
+        // Simple validation: check if card number length is 16
+        if (cardNumber != null && cardNumber.length() == 16) {
+            System.out.println("Card is valid.");
+        } else {
+            System.out.println("Card is invalid.");
+        }
+    }
 
     @Override
     public void getPayment() {

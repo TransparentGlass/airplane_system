@@ -1,4 +1,4 @@
-package com.airplane.FlightSystem;
+package com.airplane.FlightSystem.Booking;
 public abstract class Person {
     protected String name;
     protected String passportNumber;

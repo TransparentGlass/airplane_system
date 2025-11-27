@@ -8,6 +8,7 @@ public class CancelledBooking extends Booking {
         super(passenger, bookedFlight);
     }
 
+    //TODO: Implement a show booking status method to show that the booking is cancelled.
     @Override
     public void bookingFlight() {
         System.out.println("Booking not completed. Status: CANCELLED");

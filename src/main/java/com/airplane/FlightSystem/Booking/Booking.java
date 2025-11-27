@@ -6,7 +6,6 @@ import java.util.List;
 import com.airplane.FlightSystem.Flight;
 
 public abstract class Booking {
-    //TODO: Implement multiple people booking under one reservation.
     protected List<Passenger> passenger;
     protected Flight bookedFlight;
 
@@ -21,6 +20,10 @@ public abstract class Booking {
         this.passenger = new ArrayList<>(List.of(passenger));
         this.bookedFlight = bookedFlight;
     }
+
+    //TODO: Impplement a method that cycles through multiple passengers in a booking and a single passenger and shows their status. 
+    //TODO: Create a flowchart for the booking process.
+    //TODO: Implement a show booking status method to show that the booking is confirmed or cancelled.
 
     public abstract void bookingFlight();
     public abstract void cancelBooking();

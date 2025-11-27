@@ -22,4 +22,6 @@ public class ConfirmedBooking extends Booking {
         bookedFlight.setAvailableSeats(bookedFlight.getAvailableSeats() + 1);
         System.out.println("Booking Cancelled for " + passenger.getName());
     }
+
+    
 }
